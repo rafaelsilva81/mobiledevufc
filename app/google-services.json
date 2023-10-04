@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "509297713934",
+    "project_id": "devmobileufc",
+    "storage_bucket": "devmobileufc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:509297713934:android:6084e9bc9f585e3289ed5f",
+        "android_client_info": {
+          "package_name": "com.rafaelsilva81.mobiledevufc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "509297713934-n8oqm0st3t1nl8ev0u8bf70mk7a92eu9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrMeeLayeOYQVg-DB61UR4gvVT-hNJLnc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "509297713934-n8oqm0st3t1nl8ev0u8bf70mk7a92eu9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

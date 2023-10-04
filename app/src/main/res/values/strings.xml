@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">
+        CorretoraMax
+    </string>
+
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_home">Início</string>
+    <string name="title_create_property">Adicionar</string>
+    <string name="title_list_properties">Imóveis</string>
+    <string name="title_details">Detalhes</string>
+    <string name="title_activity_maps">MapsActivity</string>
+
+
+    <string-array name="orderByOptionsArray">
+        <item> - </item>
+        <item>Preço Crescente</item>
+        <item>Preço Decrescente</item>
+    </string-array>
+
+    <string-array name="businessTypeOptionsArray">
+        <item> Qualquer </item>
+        <item> Apenas Aluguel </item>
+        <item> Apenas Venda </item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/app_logo"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_add_property"
+        android:icon="@drawable/create_property"
+        android:title="@string/title_create_property" />
+
+    <item
+        android:id="@+id/navigation_list_properties"
+        android:icon="@drawable/edit_properties"
+        android:title="@string/title_list_properties" />
+
+</menu>

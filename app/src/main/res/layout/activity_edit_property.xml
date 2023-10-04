@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/estateForm"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.EditPropertyActivity"
+    tools:ignore="ExtraText">
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:logo="@drawable/edit_icon_ac"
+        app:popupTheme="@style/Theme.PopupOverlay.Menu"
+        app:title="Editar"
+        app:titleMarginStart="30dp" />
+
+    <LinearLayout
+        android:id="@+id/estateAddressContainer_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/estateAddressLayout_edit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="Endereço">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/estateAddressInput_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/estateDescriptionLayout_edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:hint="Descrição"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/estateAddressContainer_edit">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/estateDescriptionInput_edit"
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:inputType="textMultiLine"
+            android:lines="5" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/estatePriceLayout_edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:hint="Preço (R$)"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/estateDescriptionLayout_edit">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/estatePriceInput_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/estateAreaLayout_edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:hint="Área (m²)"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/estatePriceLayout_edit">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/estateAreaInput_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/estateImageButton_edit"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:drawableStart="@android:drawable/ic_menu_camera"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/primary"
+        android:isScrollContainer="true"
+        android:text="Alterar Imagem"
+        android:textAlignment="center"
+        android:textColor="@color/primary"
+        app:backgroundTint="@android:color/transparent"
+        app:cornerRadius="@dimen/rounded_sm"
+        app:icon="@android:drawable/stat_sys_upload"
+        app:iconGravity="textStart"
+        app:iconTint="@color/primary"
+        app:iconTintMode="src_in"
+        app:layout_constraintTop_toBottomOf="@id/estateAreaLayout_edit"
+        app:rippleColor="@color/violet_50"
+        app:strokeColor="@color/gray_600"
+        app:strokeWidth="1dp"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <LinearLayout
+        android:id="@+id/estateCheckboxesLayout_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="4dp"
+        android:gravity="top"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/estateImageButton_edit"
+        tools:layout_editor_absoluteX="16dp">
+
+        <CheckBox
+            android:id="@+id/estateAvailableCheckbox_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:checked="true"
+            android:text="Disponível?" />
+
+        <CheckBox
+            android:id="@+id/estateRentalCheckbox_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="Para Alugar?" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/estateEditButton_edit"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:drawableStart="@drawable/edit_icon"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/white"
+        android:enabled="true"
+        android:isScrollContainer="false"
+        android:pointerIcon="context_menu"
+        android:text="Finalizar edição"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/success"
+        app:cornerRadius="@dimen/rounded_md"
+        app:icon="@drawable/edit_icon"
+        app:iconGravity="textStart"
+        app:iconTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/estateCheckboxesLayout_edit"
+        app:rippleColor="@color/success_ripple" />
+
+    <Button
+        android:id="@+id/estateClearButton_edit"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="4dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="Limpar Inputs"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/red_500"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:cornerRadius="@dimen/rounded_sm"
+        app:iconPadding="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/estateEditButton_edit"
+        app:rippleColor="@color/red_300" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
